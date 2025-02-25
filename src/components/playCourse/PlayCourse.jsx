@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,10 @@ import { posters } from "@/assets/images";
 
 
 const PlayCourse = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const videoRef = useRef(null);
   const [playVideo, setPlayVideo] = useState(false);
@@ -115,7 +119,7 @@ const PlayCourse = () => {
             /> */}
 
             <video
-              
+              poster={activeMedia.image}
               className="w-full h-full  object-cover"
               ref={videoRef}
               src={activeMedia.video}
@@ -244,7 +248,7 @@ const PlayCourse = () => {
         <div className="py-10">
           <div className="flex items-center gap-4">
             <img
-              className="w-[65px] h-[65px] rounded-full"
+              className="w-[65px] h-[65px] object-cover rounded-full"
               src={teacher_image}
             />
             <div>

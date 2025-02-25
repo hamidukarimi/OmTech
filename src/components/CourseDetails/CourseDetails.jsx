@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, } from "react";
 import { useLocation } from "react-router-dom";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
@@ -9,6 +9,12 @@ import { icons } from "@/assets/images";
 
 
 let CourseDetails = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  
   const navigate = useNavigate();
 
   const location = useLocation();

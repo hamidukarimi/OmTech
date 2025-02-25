@@ -129,7 +129,7 @@ const Course = ({
   };
 
   return (
-    <div className="mb-14 relative border border-ourOrange bg-courseBGcolor rounded-[12px]">
+    <div className="mb-14 relative border border-ourOrange overflow-hidden bg-courseBGcolor rounded-[12px]">
       <span
         onClick={handleBookmark}
         className="absolute top-3 right-3 text-3xl active:text-gray-300"
@@ -149,7 +149,7 @@ const Course = ({
         onLoad={handleImageLoad}
         src={image}
         alt="Course"
-        className="w-full rounded-[12px_12px_0_0]"
+        className="w-full h-[290px] object-cover  rounded-[12px_12px_0_0]"
         style={{ display: imageLoaded ? "block" : "none" }}
       />
       <div className="px-3 py-7">

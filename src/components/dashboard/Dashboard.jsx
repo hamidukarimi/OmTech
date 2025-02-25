@@ -7,6 +7,12 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 
 const Dashboard = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const [activeSection, setActiveSection] = useState("Services");
 
   const cards = [
@@ -125,7 +131,7 @@ const Dashboard = () => {
         {activeSection === "Suscription" && (
           <div className="w-full relative h-[300px]">
             <p className="text-2xl text-center text-nowrap absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              No content to show
+              No canten to show
             </p>
           </div>
         )}

@@ -67,7 +67,7 @@ const Bookmarks = () => {
 
                 <div className="grid grid-cols-2  gap-1.5 relative mb-5">
                 <span onClick={() => handleRemoveFavorite(course)} className="absolute top-0 right-0 text-2xl text-ourOrange bg-bodyColor pl-3"><FontAwesomeIcon icon={faBookmark}/></span>
-                  <div className="w-[95%] h-full bg-red-300 rounded-lg overflow-hidden">
+                  <div className="w-[95%] h-[173px] object-cover bg-darkGray rounded-lg overflow-hidden">
                     <img className="w-full h-full " src={course.image}/>
                   </div>
                   <div className="w-full">

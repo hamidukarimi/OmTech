@@ -47,7 +47,7 @@ const FAQ = () => {
             <div className="border border-gray-700 rounded">
               <h2 className="accordion-header">
               <button
-                  className="accordion-button   text-start text-gray-100 px-3 py-3 text-xl font-bold w-full flex items-center justify-between border-b border-gray-700"
+                  className="accordion-button   text-start text-gray-100 px-3 py-3 text-lg  w-full flex items-center justify-between border-b border-gray-700"
                   onClick={() => toggleAccordion(1)}
                 >
                   How to enroll to a course
@@ -87,10 +87,10 @@ const FAQ = () => {
             <div className="border border-gray-700 rounded">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button   text-start text-gray-100 px-3 py-3 text-xl font-bold w-full flex items-center justify-between border-b border-gray-700"
+                  className="accordion-button   text-start text-gray-100 px-3 py-3 text-lg  w-full flex items-center justify-between border-b border-gray-700"
                   onClick={() => toggleAccordion(2)}
                 >
-                  How to enroll to a course
+                  Can I access course materials offline?
                   <svg
                     className={`w-9 h-9 transform transition-transform ${
                       openIndex === 2 ? "rotate-180" : ""
@@ -128,10 +128,10 @@ const FAQ = () => {
             <div className="border border-gray-700 rounded">
               <h2 className="accordion-header">
               <button
-                  className="accordion-button   text-start text-gray-100 px-3 py-3 text-xl font-bold w-full flex items-center justify-between border-b border-gray-700"
+                  className="accordion-button   text-start text-gray-100 px-3 py-3 text-lg  w-full flex items-center justify-between border-b border-gray-700"
                   onClick={() => toggleAccordion(3)}
                 >
-                  How to enroll to a course
+                  Are certificates provided upon course completion?
                   <svg
                     className={`w-9 h-9 transform transition-transform ${
                       openIndex === 3 ? "rotate-180" : ""
@@ -169,10 +169,10 @@ const FAQ = () => {
              <div className="border border-gray-700 rounded">
               <h2 className="accordion-header">
               <button
-                  className="accordion-button   text-start text-gray-100 px-3 py-3 text-xl font-bold w-full flex items-center justify-between border-b border-gray-700"
+                  className="accordion-button   text-start text-gray-100 px-3 py-3 text-lg  w-full flex items-center justify-between border-b border-gray-700"
                   onClick={() => toggleAccordion(4)}
                 >
-                  How to enroll to a course
+                  Are the courses self-paced or scheduled?
                   <svg
                     className={`w-9 h-9 transform transition-transform ${
                       openIndex === 4 ? "rotate-180" : ""

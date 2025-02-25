@@ -120,15 +120,15 @@ const Sidebar = ({ closeSidebar }) => {
       <div className="mt-14 mb-6">
         <p className="mb-5 text-[#b9b9b9]">Free Courses</p>
 
-        <SidebarMenu icon={faDotCircle} name="HTML 5" path="/undefined" />
-        <SidebarMenu icon={faDotCircle} name="Figms" path="/undefined" />
-        <SidebarMenu icon={faDotCircle} name="GitHub" path="/undefined" />
-        <SidebarMenu icon={faDotCircle} name="SEO" path="/undefined" />
-        <SidebarMenu icon={faDotCircle} name="Tailwind CSS" path="/undefined" />
+        <SidebarMenu icon={faDotCircle} name="HTML 5" path="/free-courses" />
+        <SidebarMenu icon={faDotCircle} name="Figms" path="/free-courses" />
+        <SidebarMenu icon={faDotCircle} name="GitHub" path="/free-courses" />
+        <SidebarMenu icon={faDotCircle} name="SEO" path="/free-courses" />
+        <SidebarMenu icon={faDotCircle} name="Tailwind CSS" path="/free-courses" />
         <div className={`${showAllOpen === true ? "hidden" : "block"}`}>
-          <SidebarMenu icon={faDotCircle} name="Next.Js" path="/undefined" />
-          <SidebarMenu icon={faDotCircle} name="React Js" path="/undefined" />
-          <SidebarMenu icon={faDotCircle} name="Vue Js" path="/undefined" />
+          <SidebarMenu icon={faDotCircle} name="Next.Js" path="/free-courses" />
+          <SidebarMenu icon={faDotCircle} name="React Js" path="/free-courses" />
+          <SidebarMenu icon={faDotCircle} name="Vue Js" path="/free-courses" />
         </div>
       </div>
       <span onClick={toggleShowAll} className="p-3  bg-darkGray">
@@ -140,7 +140,7 @@ const Sidebar = ({ closeSidebar }) => {
 
         <span onClick={handleShare}><SidebarMenu icon={faCoffee} name="Support Uz"  /></span>
 
-        <a href="/undefined">
+        <a href="/free-courses">
           <div className="flex text-red-500 items-center py-3 text-[22px] font-bold gap-2">
             <FontAwesomeIcon
               className="w-[30px]"

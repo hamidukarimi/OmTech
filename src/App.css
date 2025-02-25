@@ -3,6 +3,14 @@ body {
     color: white;
 }
 
+@media (min-width: 490px) {
+  body {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+
 .loader {
     width: 100vw;
     height: 100vh;
