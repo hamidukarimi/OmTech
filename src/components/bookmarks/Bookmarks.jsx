@@ -1,0 +1,98 @@
+import React, { useState, useEffect } from "react";
+
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+
+import Course from "../course/Course";
+import Header from "../header/Header";
+import { icons, posters } from "@/assets/images";
+
+
+const Bookmarks = () => {
+  // State to check if the main course image has finished loading
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // isLoading here is determined by whether the image has loaded
+  const isLoading = !imageLoaded;
+
+  // When the image loads, update the state
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  const [bookmarks, setBookmarks] = useState([]);
+
+  useEffect(() => {
+    const storedBookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+    setBookmarks(storedBookmarks);
+  }, []);
+
+  // Handle removing from bookmarks
+  const handleRemoveFavorite = (cardToRemove) => {
+    const updatedBookmarks = bookmarks.filter(
+      (card) => card.id !== cardToRemove.id
+    );
+    setBookmarks(updatedBookmarks);
+    localStorage.setItem("bookmarks", JSON.stringify(updatedBookmarks));
+  };
+
+  return (
+    <>
+      <Header />
+
+      <div className="px-5">
+        <p className="text-3xl mt-20 mb-2 font-bold">Saved Courses</p>
+
+        <div className="relative ">
+          <input
+            className="w-full pl-5 pr-14 py-2 mt-5 rounded-[30px] text-white text-xl bg-bodyColor border border-ourOrange outline-none"
+            placeholder="Search..."
+          />
+          <span className="absolute right-5 top-8 ">
+            <img className="w-[27px] " src={icons.search2} />
+          </span>
+        </div>
+
+        <div className="py-12">
+          {bookmarks.length > 0 ? (
+            bookmarks.map((course) => (
+              <>
+               
+
+               
+
+
+                <div className="grid grid-cols-2  gap-1.5 relative mb-5">
+                <span onClick={() => handleRemoveFavorite(course)} className="absolute top-0 right-0 text-2xl text-ourOrange bg-bodyColor pl-3"><FontAwesomeIcon icon={faBookmark}/></span>
+                  <div className="w-[95%] h-full bg-red-300 rounded-lg overflow-hidden">
+                    <img className="w-full h-full " src={course.image}/>
+                  </div>
+                  <div className="w-full">
+                    <p className="font-bold text-xl ">{course.title}</p>
+                    <p className="text-[14px] my-2 line-clamp-3">{course.description}</p>
+                    <p className="font-bold text-xl">{course.price}</p>
+                  </div>
+                </div>
+
+                
+              </>
+            ))
+          ) : (
+            <div className="text-2xl text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <FontAwesomeIcon
+                className="text-ourOrange text-4xl"
+                icon={faBookmark}
+              />
+              <p className="mt-3 text-nowrap">No bookmarks yet!</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Bookmarks;
