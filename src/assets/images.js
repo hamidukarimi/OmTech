@@ -25,6 +25,7 @@ const icons = {
     finance: new URL("@/assets/icons/finance.png", import.meta.url).href,
     instructor: new URL("@/assets/icons/instructor.png", import.meta.url).href,
     learning: new URL("@/assets/icons/learning.png", import.meta.url).href,
+    pricing: new URL("@/assets/icons/best-price.png", import.meta.url).href,
     mobileDev: new URL("@/assets/icons/mobileDev.png", import.meta.url).href,
     pencil: new URL("@/assets/icons/pencil.png", import.meta.url).href,
     results: new URL("@/assets/icons/results.png", import.meta.url).href,
@@ -33,6 +34,9 @@ const icons = {
     uxui: new URL("@/assets/icons/uxui.png", import.meta.url).href,
     video: new URL("@/assets/icons/video.png", import.meta.url).href,
     web: new URL("@/assets/icons/web.png", import.meta.url).href,
+    onlineLearning: new URL("@/assets/icons/online-learning.png", import.meta.url).href,
+    free: new URL("@/assets/icons/free.png", import.meta.url).href,
+    doc: new URL("@/assets/icons/doc.png", import.meta.url).href,
   };
 
   const posters = {

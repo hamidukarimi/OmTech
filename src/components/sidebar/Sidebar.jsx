@@ -66,10 +66,10 @@ const Sidebar = ({ closeSidebar }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0  overflow-y-scroll z-40 w-[80%] h-[100%] bg-[#262626] pb-5 px-6">
+    <div className=" fixed top-0 left-0  overflow-y-scroll scrollbar-none z-40 w-[80%] h-[100%] bg-[#262626] pb-5 px-6">
       <div className="sticky z-30 top-0 flex justify-between items-center bg-[#262626]  h-[85px]">
         <p className="text-ourOrange text-3xl font-bold">OmTech</p>
-        <span onClick={closeSidebar} className=" text-[25px] text-ourOrange">
+        <span onClick={closeSidebar} className=" text-[25px] cursor-pointer text-ourOrange">
           <img src={icons.bars} />
         </span>
       </div>
@@ -113,7 +113,7 @@ const Sidebar = ({ closeSidebar }) => {
           <SidebarMenu icon={faDotCircle} name="Vue Js" path="/free-courses" />
         </div>
       </div>
-      <span onClick={toggleShowAll} className="p-3  bg-darkGray">
+      <span onClick={toggleShowAll} className="p-3 cursor-pointer bg-darkGray">
         {showAllOpen === true ? "Show Less" : "Show All"}
       </span>
 
@@ -131,7 +131,7 @@ const Sidebar = ({ closeSidebar }) => {
           <SidebarMenu icon={faDotCircle} name="Vue Js" path="/free-courses" />
         </div>
       </div>
-      <span onClick={toggleShowAll} className="p-3  bg-darkGray">
+      <span onClick={toggleShowAll} className="p-3 cursor-pointer bg-darkGray">
         {showAllOpen === true ? "Show All" : "Show Less"}
       </span>
 

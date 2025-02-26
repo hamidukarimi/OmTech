@@ -14,7 +14,7 @@ let PopularCourses = () => {
       title: "Full-Stack Development",
       lessons: "28",
       description:
-        "Lorem ispum doler sit amet Lorem ispum doler sit amet. Lorem ispum doler sit amet Lorem ispum doler sit amet. Lorem ispum doler sit amet Lorem ispum doler sit amet. Lorem ispum doler sit amet Lorem ispum doler sit amet. Lorem ispum doler sit amet Lorem ispum doler sit amet.",
+        "In this full-stack development course, you'll master both front-end and back-end technologies over 28 comprehensive lessons. Covering essential topics from HTML/CSS and JavaScript to server-side scripting and database management, you'll gain practical skills to build dynamic web applications.",
       time_span: "3 weeks",
       lectures: "7 Lessons",
       video_lessons: "10 hours",
@@ -22,9 +22,9 @@ let PopularCourses = () => {
       bg_image: "https://i.pinimg.com/474x/ca/d9/4d/cad94d6b730143f7f7121b4dca4db64f.jpg",
       teacher_image: "https://i.pinimg.com/236x/b9/c5/2c/b9c52ca45be6fe69008466f749622afe.jpg",
       teacher_name: "Sarah Smith",
-      teacher_position: "Front-End Developer",
+      teacher_position: "Full-Stack Developer",
       about_course:
-        "In this tutorial, we will learn the basics of Photoshop, including layers, tools, filters, and adjustments.",
+        "In this course, you'll explore the fundamentals of full-stack development, from front-end design to back-end logic, building dynamic and interactive web applications.",
       views: 3200,
       duration: "30:00",
       playVideos: {

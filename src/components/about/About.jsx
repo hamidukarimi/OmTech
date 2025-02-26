@@ -1,16 +1,15 @@
-
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import TestimonialCard from "../testimonials/TestimonialCard";
 
-import { backgrounds, members, students } from "@/assets/images";
-
+import { backgrounds } from "@/assets/images";
 
 let About = () => {
   const ourTeam = [
     {
       id: 0,
-      image: "https://i.pinimg.com/236x/1d/3d/5a/1d3d5a32cf8ad773b86d92a20ec8429d.jpg",
+      image:
+        "https://i.pinimg.com/236x/1d/3d/5a/1d3d5a32cf8ad773b86d92a20ec8429d.jpg",
       name: "Ahmad Khan",
       position: "CEO & FOUNDER",
       facebookLink: "",
@@ -19,7 +18,8 @@ let About = () => {
     },
     {
       id: 0,
-      image: "https://i.pinimg.com/236x/18/1e/52/181e52c7ceaf545ca1c103a97efa3593.jpg",
+      image:
+        "https://i.pinimg.com/236x/18/1e/52/181e52c7ceaf545ca1c103a97efa3593.jpg",
       name: "Zainab Ommah",
       position: "General Manager",
       facebookLink: "",
@@ -28,7 +28,8 @@ let About = () => {
     },
     {
       id: 0,
-      image: "https://i.pinimg.com/236x/8c/dc/1b/8cdc1b3ecd021d43e8ae4d7513121b2f.jpg ",
+      image:
+        "https://i.pinimg.com/236x/8c/dc/1b/8cdc1b3ecd021d43e8ae4d7513121b2f.jpg ",
       name: "Othman Ubbo",
       position: "Finance Officer",
       facebookLink: "",
@@ -41,7 +42,10 @@ let About = () => {
     <div>
       <Header />
 
-      <div className="nowex h-[530px]" style={{ backgroundImage: `url(${backgrounds.aboutBG})` }}></div>
+      <div
+        className="nowex h-[530px]"
+        style={{ backgroundImage: `url(${backgrounds.aboutBG})` }}
+      ></div>
 
       <div className="hero-overlay w-full h-[530px]  ] absolute top-[62px] z-10"></div>
 
@@ -76,10 +80,12 @@ let About = () => {
           <div className="px-2">
             {ourTeam.map((card) => (
               <div className="my-14 w-full h-[360px] rounded-3xl  relative">
-              <div className="w-full h-[360px] rounded-[18px] overflow-hidden">
-              <img className="w-full h-full object-cover" src={card.image} />
-
-              </div>
+                <div className="w-full h-[360px] rounded-[18px] overflow-hidden">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={card.image}
+                  />
+                </div>
                 <div className="overlay w-full h-[155px] rounded-[0_0_18px_18px] absolute bottom-0"></div>
                 <div className="personContent font-bold text-center absolute bottom-0 w-full">
                   <p className="text-3xl mb-2">{card.name}</p>
@@ -113,34 +119,34 @@ let About = () => {
 
       <div className="px-5 pb-28">
         <TestimonialCard
-          message="lorem ispum doler asinfd d dfdsufy dsfuufy dfhdvu fhv fuh hvuahv vuhv cudchdhc dhdhduvhr uhcdhv"
-          image={students.std1}
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+          image="https://i.pinimg.com/236x/c6/0b/ec/c60bec168e19a2c9881bfc2806766fc7.jpg"
           name="Emma Carter"
           position="Front-End Developer"
         />
         <TestimonialCard
-          message="lorem ispum doler asinfd d dfdsufy dsfuufy dfhdvu fhv fuh hvuahv vuhv cudchdhc dhdhduvhr uhcdhv"
-          image={students.std2}
-          name="Olivia Bennett"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+          image="https://i.pinimg.com/236x/16/32/55/1632554a2d56114c2513492486171066.jpg"
+          name="Maria Hassa"
           position="Graphic Designer"
         />
         <TestimonialCard
-          message="lorem ispum doler asinfd d dfdsufy dsfuufy dfhdvu fhv fuh hvuahv vuhv cudchdhc dhdhduvhr uhcdhv"
-          image={students.std3}
-          name="Sophia Collins"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+          image="https://i.pinimg.com/236x/9f/b3/f3/9fb3f3e99221c84726335d003813e1e9.jpg"
+          name="John Beast"
           position="UX/UI Designer"
         />
         <TestimonialCard
-          message="lorem ispum doler asinfd d dfdsufy dsfuufy dfhdvu fhv fuh hvuahv vuhv cudchdhc dhdhduvhr uhcdhv"
-          image={students.std3}
-          name="Sophia Collins"
-          position="UX/UI Designer"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+          image="https://i.pinimg.com/236x/cb/e2/9e/cbe29ea7139e76c33cb28a9c945acc2b.jpg"
+          name="Layla Hussain"
+          position="Data Analyst"
         />
         <TestimonialCard
-          message="lorem ispum doler asinfd d dfdsufy dsfuufy dfhdvu fhv fuh hvuahv vuhv cudchdhc dhdhduvhr uhcdhv"
-          image={students.std3}
-          name="Sophia Collins"
-          position="UX/UI Designer"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+          image="https://i.pinimg.com/236x/b5/37/28/b5372811c4b763201c6cf324db5820ec.jpg"
+          name="Zayd Ahmad"
+          position="Digital Marketer"
         />
       </div>
 

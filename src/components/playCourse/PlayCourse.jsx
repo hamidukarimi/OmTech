@@ -113,10 +113,7 @@ const PlayCourse = () => {
       <>
         <div className="font-bold text-xl ">
           <div className="w-full h-[280px]  overflow-hidden relative">
-            {/* <img
-              className="w-full h-full object-cover"
-              src={activeMedia.image}
-            /> */}
+            
 
             <video
               poster={activeMedia.image}
@@ -195,7 +192,7 @@ const PlayCourse = () => {
        </div>
 
         {mediaData.map((media) => (
-            <div onClick={() => setActiveMedia(media)} key={media.id} className="w-full h-[118px] flex rounded-md mb-4 border border-ourOrange ">
+            <div onClick={() => setActiveMedia(media)} key={media.id} className="w-full h-[118px] flex rounded-md overflow-hidden mb-4 border border-ourOrange ">
               <div className="w-[50%] h-full bg-darkGray">
                 <img className="h-full w-full" src={media.image} />
               </div>

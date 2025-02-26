@@ -10,20 +10,20 @@ let Standout = () => {
     },
     {
       id: 1,
-      icon: icons.results,
-      title: "Expert Instructor",
+      icon: icons.learning,
+      title: "Flexible Learning",
       description: "Lorem ispum doler aset met kia meritonhe meri",
     },
     {
       id: 2,
-      icon: icons.learning,
-      title: "Flexible Learningr",
+      icon: icons.pricing,
+      title: "Affordable Pricing",
       description: "Lorem ispum doler aset met kia meritonhe meri",
     },
     {
       id: 3,
       icon: icons.results,
-      title: "Flexible Learningr",
+      title: "Proven Results Instructors",
       description: "Lorem ispum doler aset met kia meritonhe meri",
     },
   ];

@@ -7,8 +7,8 @@ const BackNav = ({pageName}) => {
   };
 
   return (
-    <div className="w-full h-[60px] bg-darkGray sticky -top-1 z-40 flex items-center p-3 text-3xl">
-      <FontAwesomeIcon onClick={goBack} icon={faArrowLeft} />
+    <div className="w-full h-[60px] bg-darkGray sticky -top-1 z-50 flex items-center p-3 text-3xl">
+      <FontAwesomeIcon className="cursor-pointer" onClick={goBack} icon={faArrowLeft} />
       <span className="text-2xl ml-4">{pageName}</span>
     </div>
   );

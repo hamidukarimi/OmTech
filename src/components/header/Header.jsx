@@ -67,7 +67,7 @@ let Header = () => {
         {/* <Link to="/"><span className="font-bold text-ourOrange text-[27px] ">OmTech</span></Link> */}
         <span
           onClick={handleSidebar}
-          className="flex justify-center items-center "
+          className="flex justify-center items-center cursor-pointer"
         >
           <img src={icons.bars} />
         </span>
@@ -78,7 +78,7 @@ let Header = () => {
           </span>
 
           
-          <span onClick={handleNotifications} className="text-ourOrange">
+          <span onClick={handleNotifications} className="text-ourOrange cursor-pointer">
             <FontAwesomeIcon icon={faBell} />
           </span>
 

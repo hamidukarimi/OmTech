@@ -132,7 +132,7 @@ const Course = ({
     <div className="mb-14 relative border border-ourOrange overflow-hidden bg-courseBGcolor rounded-[12px]">
       <span
         onClick={handleBookmark}
-        className="absolute top-3 right-3 text-3xl active:text-gray-300"
+        className="absolute top-3 right-3 cursor-pointer text-3xl active:text-ourOrange"
       >
         <FontAwesomeIcon icon={faBookmark} />
       </span>

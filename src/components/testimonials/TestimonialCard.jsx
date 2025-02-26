@@ -16,7 +16,7 @@ let TestimonialCard = ({ message, image, name, position }) => {
       <hr />
 
       <div className="flex items-center gap-3 mt-10 ">
-        <img className="w-16 h-16  rounded-full  " src={image} />
+        <img className="w-16 h-16  rounded-full object-cover " src={image} />
         <div>
           <p className="text-xl font-bold pb-2">{name}</p>
           <p className="text-gray-300 text-md">{position}</p>
