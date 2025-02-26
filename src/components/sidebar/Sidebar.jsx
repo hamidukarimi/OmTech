@@ -28,20 +28,16 @@ import {
 import { faDotCircle } from "@fortawesome/free-regular-svg-icons";
 
 let SidebarMenu = ({ icon, name, path }) => {
- 
-
   return (
     <NavLink
       to={path}
       exact
       activeClassName=" "
-      style={({ isActive }) => {
-        return {
-          color: isActive ? "white" : "#b9b9b9",
-        };
-      }}
+      style={({ isActive }) => ({
+        color: isActive ? "white" : "#b9b9b9",
+      })}
     >
-      <div className="flex items-center py-3 text-[22px] font-bold gap-2 ">
+      <div className="flex items-center py-3 text-[22px] font-bold gap-2">
         <FontAwesomeIcon className="w-[30px]" icon={icon} />
         <p>{name}</p>
       </div>
@@ -49,28 +45,25 @@ let SidebarMenu = ({ icon, name, path }) => {
   );
 };
 
-const Sidebar = ({ closeSidebar }) => {
+const Sidebar = ({ sidebarShow, closeSidebar }) => {
   const [showAllOpen, setShowAllOpen] = useState(false);
-  const toggleShowAll = () => {
-    if (showAllOpen === false) {
-      setShowAllOpen(true);
-    } else {
-      setShowAllOpen(false);
-    }
-  };
+  const toggleShowAll = () => setShowAllOpen((prev) => !prev);
 
   const [showShareOptions, setShowShareOptions] = useState(false);
-
-  const handleShare = () => {
-    setShowShareOptions(!showShareOptions);
-  };
+  const handleShare = () => setShowShareOptions((prev) => !prev);
 
   return (
-    <div className=" fixed top-0 left-0  overflow-y-scroll scrollbar-none z-40 w-[80%] h-[100%] bg-[#262626] pb-5 px-6">
-      <div className="sticky z-30 top-0 flex justify-between items-center bg-[#262626]  h-[85px]">
+    <div
+      className={`
+        fixed top-0 left-0 w-[80%] h-full overflow-y-scroll scrollbar-none z-40 bg-[#262626] pb-5 px-6
+        transform transition-transform duration-300
+        ${sidebarShow ? "translate-x-0" : "-translate-x-full"}
+      `}
+    >
+      <div className="sticky z-30 top-0 flex justify-between items-center bg-[#262626] h-[85px]">
         <p className="text-ourOrange text-3xl font-bold">OmTech</p>
-        <span onClick={closeSidebar} className=" text-[25px] cursor-pointer text-ourOrange">
-          <img src={icons.bars} />
+        <span onClick={closeSidebar} className="text-[25px] cursor-pointer text-ourOrange">
+          <img src={icons.bars} alt="Close Sidebar" />
         </span>
       </div>
       <div className="relative">
@@ -79,11 +72,11 @@ const Sidebar = ({ closeSidebar }) => {
           placeholder="Search"
         />
         <span className="absolute top-[33px] right-4">
-          <img src={icons.search2} />
+          <img src={icons.search2} alt="Search" />
         </span>
       </div>
       <Link to="/">
-        <div className="border-2 flex items-center justify-between border-green-400 rounded-lg px-5 text-xl py-3 font-bold   mb-3">
+        <div className="border-2 flex items-center justify-between border-green-400 rounded-lg px-5 text-xl py-3 font-bold mb-3">
           <p>Live Classes</p>
           <span className="text-lg text-green-500 relative inline-block">
             <FontAwesomeIcon icon={faCircle} className="animate-pulse" />
@@ -98,95 +91,83 @@ const Sidebar = ({ closeSidebar }) => {
         <SidebarMenu icon={faBook} name="FAQ" path="/FAQ" />
         <SidebarMenu icon={faAddressBook} name="Contact" path="/contact-page" />
       </div>
-
       <div className="mt-12 mb-6">
         <p className="mb-5 text-[#b9b9b9]">Suggested Courses</p>
-
         <SidebarMenu icon={faDotCircle} name="React Js" path="/free-courses" />
         <SidebarMenu icon={faDotCircle} name="UX/UI Design" path="/free-courses" />
         <SidebarMenu icon={faDotCircle} name="Git GitHub" path="/free-courses" />
         <SidebarMenu icon={faDotCircle} name="Photo Shop" path="/free-courses" />
         <SidebarMenu icon={faDotCircle} name="Angular Js" path="/free-courses" />
-        <div className={`${showAllOpen === true ? "block" : "hidden"}`}>
+        <div className={showAllOpen ? "block" : "hidden"}>
           <SidebarMenu icon={faDotCircle} name="Next Js" path="/free-courses" />
           <SidebarMenu icon={faDotCircle} name="React Js" path="/free-courses" />
           <SidebarMenu icon={faDotCircle} name="Vue Js" path="/free-courses" />
         </div>
       </div>
       <span onClick={toggleShowAll} className="p-3 cursor-pointer bg-darkGray">
-        {showAllOpen === true ? "Show Less" : "Show All"}
+        {showAllOpen ? "Show Less" : "Show All"}
       </span>
-
       <div className="mt-14 mb-6">
         <p className="mb-5 text-[#b9b9b9]">Free Courses</p>
-
         <SidebarMenu icon={faDotCircle} name="HTML 5" path="/free-courses" />
         <SidebarMenu icon={faDotCircle} name="Figms" path="/free-courses" />
         <SidebarMenu icon={faDotCircle} name="GitHub" path="/free-courses" />
         <SidebarMenu icon={faDotCircle} name="SEO" path="/free-courses" />
         <SidebarMenu icon={faDotCircle} name="Tailwind CSS" path="/free-courses" />
-        <div className={`${showAllOpen === true ? "hidden" : "block"}`}>
+        <div className={showAllOpen ? "hidden" : "block"}>
           <SidebarMenu icon={faDotCircle} name="Next.Js" path="/free-courses" />
           <SidebarMenu icon={faDotCircle} name="React Js" path="/free-courses" />
           <SidebarMenu icon={faDotCircle} name="Vue Js" path="/free-courses" />
         </div>
       </div>
       <span onClick={toggleShowAll} className="p-3 cursor-pointer bg-darkGray">
-        {showAllOpen === true ? "Show All" : "Show Less"}
+        {showAllOpen ? "Show All" : "Show Less"}
       </span>
-
       <div className="mt-14 mb-6">
         <SidebarMenu icon={faBookmark} name="Saved Courses" path="/bookmarks" />
-
-        <span onClick={handleShare}><SidebarMenu icon={faCoffee} name="Support Uz"  /></span>
-
+        <span onClick={handleShare}>
+          <SidebarMenu icon={faCoffee} name="Support Uz" />
+        </span>
         <a href="/free-courses">
           <div className="flex text-red-500 items-center py-3 text-[22px] font-bold gap-2">
-            <FontAwesomeIcon
-              className="w-[30px]"
-              icon={faArrowRightFromBracket}
-            />
+            <FontAwesomeIcon className="w-[30px]" icon={faArrowRightFromBracket} />
             <p>Log out</p>
           </div>
         </a>
-
       </div>
-
       {showShareOptions && (
-            <div className="shareOptionsContainer">
-              <div className="shareOptionsModal">
-                <div className="shareOptionsHeader">
-                  <p className="shareOptionsTitle">Choose where to share</p>
-                  <button
-                    className="closeShareOptionsBtn"
-                    onClick={() => setShowShareOptions(false)}
-                  >
-                    <FontAwesomeIcon icon={faTimes} />
-                  </button>
-                </div>
-
-                <div className="shareOptionsList">
-                  <button className="shareOption">
-                    <FontAwesomeIcon icon={faFacebook} />
-                    Facebook
-                  </button>
-                  <button className="shareOption">
-                    <FontAwesomeIcon icon={faInstagram} />
-                    Instagram
-                  </button>
-                  <button className="shareOption">
-                    <FontAwesomeIcon icon={faLinkedin} />
-                    Linkedin
-                  </button>
-                  <button className="shareOption">
-                    <FontAwesomeIcon icon={faWhatsapp} />
-                    WhatsApp
-                  </button>
-                </div>
-              </div>
+        <div className="shareOptionsContainer">
+          <div className="shareOptionsModal">
+            <div className="shareOptionsHeader">
+              <p className="shareOptionsTitle">Choose where to share</p>
+              <button
+                className="closeShareOptionsBtn"
+                onClick={() => setShowShareOptions(false)}
+              >
+                <FontAwesomeIcon icon={faTimes} />
+              </button>
             </div>
-          )}
-
+            <div className="shareOptionsList">
+              <button className="shareOption">
+                <FontAwesomeIcon icon={faFacebook} />
+                Facebook
+              </button>
+              <button className="shareOption">
+                <FontAwesomeIcon icon={faInstagram} />
+                Instagram
+              </button>
+              <button className="shareOption">
+                <FontAwesomeIcon icon={faLinkedin} />
+                Linkedin
+              </button>
+              <button className="shareOption">
+                <FontAwesomeIcon icon={faWhatsapp} />
+                WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
