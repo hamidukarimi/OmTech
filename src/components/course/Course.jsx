@@ -178,10 +178,10 @@ const Course = ({
               <p>{lessons} Lessons</p>
               <p>{members} Members</p>
             </div>
-            <div className="flex justify-center gap-5 px-6">
+            <div className="block  [@media(min-width:340px)]:flex  justify-center gap-5 px-6">
               <button
                 onClick={goToCourseDetails}
-                className="py-3 px-9 text-lg rounded-md border border-ourOrange hover:text-[#ffffffca] transition w-[50%]"
+                className="w-full [@media(max-width:340px)]:mb-3 h-14 px-9 text-lg  rounded-md border border-ourOrange hover:text-[#ffffffca] transition "
               >
                 {navigateAfterDelay ? (
                   <FontAwesomeIcon
@@ -194,7 +194,7 @@ const Course = ({
               </button>
               <button
                 onClick={goToPlayCourse}
-                className="py-3 px-9 text-lg rounded-md bg-ourOrange hover:bg-[#efaf3a] transition w-[50%]"
+                className="w-full py-3 px-9 h-14 text-lg rounded-md bg-ourOrange hover:bg-[#efaf3a] transition "
               >
                 Enroll
               </button>

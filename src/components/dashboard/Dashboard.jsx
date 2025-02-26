@@ -84,7 +84,7 @@ const Dashboard = () => {
         <p className="text-[32px] font-bold">Dashboard</p>
 
         <ul className="flex text-[23px] gap-7 my-6">
-          {["Services", "Suscription"].map((section) => (
+          {["Services", "Subscription"].map((section) => (
             <div>
               <li
                 className={`${activeSection === section ? "border-b pb-2" : null}`}
@@ -128,7 +128,7 @@ const Dashboard = () => {
           </section>
         )}
 
-        {activeSection === "Suscription" && (
+        {activeSection === "Subscription" && (
           <div className="w-full relative h-[300px]">
             <p className="text-2xl text-center text-nowrap absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               No canten to show

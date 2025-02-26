@@ -71,7 +71,7 @@ const Bookmarks = () => {
                     <img className="w-full h-full " src={course.image}/>
                   </div>
                   <div className="w-full">
-                    <p className="font-bold text-xl ">{course.title}</p>
+                    <p className="font-bold text-xl line-clamp-2">{course.title}</p>
                     <p className="text-[14px] my-2 line-clamp-3">{course.description}</p>
                     <p className="font-bold text-xl">{course.price}</p>
                   </div>

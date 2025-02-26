@@ -111,7 +111,7 @@ const PlayCourse = () => {
   let CurrentPlay = () => {
     return (
       <>
-        <div className="font-bold text-xl">
+        <div className="font-bold text-xl ">
           <div className="w-full h-[280px]  overflow-hidden relative">
             {/* <img
               className="w-full h-full object-cover"
@@ -136,7 +136,9 @@ const PlayCourse = () => {
               <FontAwesomeIcon icon={faPlay} />
             </div>
           </div>
-          <p className="mb-1 mt-3">{activeMedia.title}</p>
+          <div className="bg-bodyColor pt-3 pb-4">
+          <p className="mb-1 ">{activeMedia.title}</p>
+          </div>
           {/* <p>James Smith</p> */}
         </div>
       </>
@@ -185,8 +187,12 @@ const PlayCourse = () => {
       <BackNav pageName="Enroll to course" />
 
       <div className="p-5">
+
+      <div>
        
-        <CurrentPlay />
+       <div className="sticky top-16">
+       <CurrentPlay />
+       </div>
 
         {mediaData.map((media) => (
             <div onClick={() => setActiveMedia(media)} key={media.id} className="w-full h-[118px] flex rounded-md mb-4 border border-ourOrange ">
@@ -194,7 +200,7 @@ const PlayCourse = () => {
                 <img className="h-full w-full" src={media.image} />
               </div>
               <div className="p-2 w-[50%] flex flex-col justify-between">
-                <p className="font-bold">{media.title}</p>
+                <p className="font-bold line-clamp-2">{media.title}</p>
                 <div className="mt-3 text-sm">
                   <p>{media.views} views</p>
                   <p>{media.duration} duration</p>
@@ -202,6 +208,7 @@ const PlayCourse = () => {
               </div>
             </div>
           ))}
+          </div>
 
         <div className="  my-6">
           {/* <NextVideo

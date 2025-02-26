@@ -19,14 +19,18 @@ const FAQ = () => {
     <div>
       <Header />
 
-      <div className="nowex h-[400px] " style={{ backgroundImage: `url(${backgrounds.faqBG})` }}></div>
-      <div className="hero-overlay w-full h-[402px]  ] absolute top-[62px] z-10"></div>
+      <div className="relative  nowex min-h-[400px] h-auto " style={{ backgroundImage: `url(${backgrounds.faqBG})` }}>
+      <div className="hero-overlay w-full h-full  absolute top-0 z-10"></div>
 
-      <div className="hero-content absolute top-56 left-4 right-4 text-white z-30">
-        <p className="text-[43px] font-bold leading-tight">
+
+      <div className="hero-content px-4 relative pt-24 bottom-5   text-white z-30 ">
+        <p className="text-[43px]  font-bold leading-tight">
           We'r here to help you with anything and anytime on this page
         </p>
       </div>
+      </div>
+
+      
 
       <div className="relative px-5">
         <input
