@@ -5,54 +5,7 @@ import { posters, students, members } from "@/assets/images";
 
 let PopularCourses = () => {
   const [courses, setCourses] = useState([
-    {
-      id: 0,
-      image: posters.fullStack,
-      type: "DEVELOPMENT",
-      price: "$50",
-      title: "Full-Stack Development",
-      lessons: "28",
-      description:
-        "Lorem ispum doler sit amet Lorem ispum doler sit amet. Lorem ispum doler sit amet Lorem ispum doler sit amet. Lorem ispum doler sit amet Lorem ispum doler sit amet. Lorem ispum doler sit amet Lorem ispum doler sit amet. Lorem ispum doler sit amet Lorem ispum doler sit amet.",
-      time_span: "3 weeks",
-      lectures: "7 Lessons",
-      video_lessons: "10 hours",
-      members: "715",
-      bg_image: posters.fullStack,
-      teacher_image: students.std2,
-      teacher_name: "James Smith",
-      teacher_position: "Front-End Developer",
-      about_course:
-        "In this tutorial, we will learn the basics of Photoshop, including layers, tools, filters, and adjustments.",
-      views: 3200,
-      duration: "30:00",
-
-      playVideos: {
-        nextV_image_1: students.std1,
-        nextV_video_1: "./upskill.mp4",
-        nextV_title_1: "Lorem ispum doler set amet",
-        nextV_views_1: 640,
-        nextV_duration_1: "23:00",
-
-        nextV_image_2: students.std2,
-        nextV_video_2: "./ed-vid.mp4",
-        nextV_title_2: "Lorem ispum doler set amet lorem ispum",
-        nextV_views_2: 418,
-        nextV_duration_2: "18:20",
-
-        nextV_image_3: students.std3,
-        nextV_video_3: "./vid-4.mp4",
-        nextV_title_3: "Lorem ispum doler set amet sign",
-        nextV_views_3: 316,
-        nextV_duration_3: "18:00",
-
-        nextV_image_4: students.std1,
-        nextV_video_4: "./vid-1.mp4",
-        nextV_title_4: "Lorem ispum doler set amet sign is lorem ket",
-        nextV_views_4: 532,
-        nextV_duration_4: "30:00",
-      },
-    },
+   
     {
       id: 0,
       image: "https://i.pinimg.com/236x/8b/33/79/8b337967a987f068e43f705aef7e7397.jpg",
