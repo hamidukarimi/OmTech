@@ -1,3 +1,4 @@
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import TestimonialCard from "./TestimonialCard";
 
 
@@ -27,6 +28,8 @@ let Testimonials = () => {
         name="John Beast"
         position="UX/UI Designer"
       />
+
+      <Link to="/About"><p className="text-center text-xl mt-12">See More</p></Link>
     </div>
   );
 };
