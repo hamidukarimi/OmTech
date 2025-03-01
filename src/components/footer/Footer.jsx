@@ -66,7 +66,7 @@ let Footer = () => {
 
         <hr />
         <br />
-        <p className="text-center font-bold  ">copyright 2024 OmTech</p>
+        <p className="text-center font-bold  ">copyright 2025 OmTech</p>
         <br />
       </div>
     </>
