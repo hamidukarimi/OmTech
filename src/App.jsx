@@ -12,6 +12,7 @@ import ContactPage from "./components/contact-page/ContactPage";
 import Bookmarks from "./components/bookmarks/Bookmarks";
 import FreeCourses from "./components/free-courses/FreeCourses";
 import AllCourses from "./components/all-courses/AllCourses";
+import SuggestedCourses from "./components/suggested-courses/SuggestedCourses";
 
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/FAQ" element={<FAQ />} />
           <Route path="/contact-page" element={<ContactPage />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
+          <Route path="/suggested-courses" element={<SuggestedCourses />} />
           <Route path="/free-courses" element={<FreeCourses />} />
           <Route path="/course_details" element={<CourseDetails />} />
           <Route path="/play_course" element={<PlayCourse />} />

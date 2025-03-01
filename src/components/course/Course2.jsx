@@ -25,6 +25,30 @@ const Course2 = ({
   views,
   duration,
   handleBookmark,
+
+  nextV_image_1,
+  nextV_video_1,
+  nextV_title_1,
+  nextV_views_1,
+  nextV_duration_1,
+
+  nextV_image_2,
+  nextV_video_2,
+  nextV_title_2,
+  nextV_views_2,
+  nextV_duration_2,
+
+  nextV_image_3,
+  nextV_video_3,
+  nextV_title_3,
+  nextV_views_3,
+  nextV_duration_3,
+
+  nextV_image_4,
+  nextV_video_4,
+  nextV_title_4,
+  nextV_views_4,
+  nextV_duration_4,
 }) => {
   const navigate = useNavigate();
   const [navigateAfterDelay, setNavigateAfterDelay] = useState(false);
@@ -64,6 +88,31 @@ const Course2 = ({
         about_course,
         views,
         duration,
+
+
+        nextV_image_1,
+        nextV_video_1,
+        nextV_title_1,
+        nextV_views_1,
+        nextV_duration_1,
+
+        nextV_image_2,
+        nextV_video_2,
+        nextV_title_2,
+        nextV_views_2,
+        nextV_duration_2,
+
+        nextV_image_3,
+        nextV_video_3,
+        nextV_title_3,
+        nextV_views_3,
+        nextV_duration_3,
+
+        nextV_image_4,
+        nextV_video_4,
+        nextV_title_4,
+        nextV_views_4,
+        nextV_duration_4,
       },
     });
   };
@@ -92,7 +141,7 @@ const Course2 = ({
 
         <button
           onClick={goToCourseDetails}
-          className="w-full h-[50px] bg-ourOrange hover:bg-[#efaf3a] transition rounded-sm mb-3"
+          className="w-full h-[50px] bg-darkGray hover:bg-[#292929]  transition rounded-sm mb-3"
         >
           {navigateAfterDelay ? (
             <FontAwesomeIcon
@@ -103,7 +152,7 @@ const Course2 = ({
             "Course Details"
           )}
         </button>
-        <button onClick={goToPlayCourse} className="w-full h-[50px] bg-darkGray hover:bg-[#292929] transition  rounded-sm">
+        <button onClick={goToPlayCourse} className="w-full h-[50px] bg-ourOrange hover:bg-[#efaf3a] transition  rounded-sm">
           Enroll Now
         </button>
       </div>

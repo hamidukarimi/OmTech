@@ -53,7 +53,8 @@ const Sidebar = ({ sidebarShow, closeSidebar }) => {
   const handleShare = () => setShowShareOptions((prev) => !prev);
 
   return (
-    <div
+   <>
+     <div
       className={`
         fixed top-0 left-0 w-[80%] h-full overflow-y-scroll scrollbar-none z-40 bg-[#262626] pb-5 px-6
         transform transition-transform duration-300
@@ -93,15 +94,15 @@ const Sidebar = ({ sidebarShow, closeSidebar }) => {
       </div>
       <div className="mt-12 mb-6">
         <p className="mb-5 text-[#b9b9b9]">Suggested Courses</p>
-        <SidebarMenu icon={faDotCircle} name="React Js" path="/free-courses" />
-        <SidebarMenu icon={faDotCircle} name="UX/UI Design" path="/free-courses" />
-        <SidebarMenu icon={faDotCircle} name="Git GitHub" path="/free-courses" />
-        <SidebarMenu icon={faDotCircle} name="Photo Shop" path="/free-courses" />
-        <SidebarMenu icon={faDotCircle} name="Angular Js" path="/free-courses" />
+        <SidebarMenu icon={faDotCircle} name="React Js" path="/suggested-courses" />
+        <SidebarMenu icon={faDotCircle} name="UX/UI Design" path="/suggested-courses" />
+        <SidebarMenu icon={faDotCircle} name="Git GitHub" path="/suggested-courses" />
+        <SidebarMenu icon={faDotCircle} name="Photo Shop" path="/suggested-courses" />
+        <SidebarMenu icon={faDotCircle} name="Angular Js" path="/suggested-courses" />
         <div className={showAllOpen ? "block" : "hidden"}>
-          <SidebarMenu icon={faDotCircle} name="Next Js" path="/free-courses" />
-          <SidebarMenu icon={faDotCircle} name="React Js" path="/free-courses" />
-          <SidebarMenu icon={faDotCircle} name="Vue Js" path="/free-courses" />
+          <SidebarMenu icon={faDotCircle} name="Next Js" path="/suggested-courses" />
+          <SidebarMenu icon={faDotCircle} name="React Js" path="/suggested-courses" />
+          <SidebarMenu icon={faDotCircle} name="Vue Js" path="/suggested-courses" />
         </div>
       </div>
       <span onClick={toggleShowAll} className="p-3 cursor-pointer bg-darkGray">
@@ -135,40 +136,44 @@ const Sidebar = ({ sidebarShow, closeSidebar }) => {
           </div>
         </a>
       </div>
-      {showShareOptions && (
-        <div className="shareOptionsContainer">
-          <div className="shareOptionsModal">
-            <div className="shareOptionsHeader">
-              <p className="shareOptionsTitle">Choose where to share</p>
-              <button
-                className="closeShareOptionsBtn"
-                onClick={() => setShowShareOptions(false)}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
-            </div>
-            <div className="shareOptionsList">
-              <button className="shareOption">
-                <FontAwesomeIcon icon={faFacebook} />
-                Facebook
-              </button>
-              <button className="shareOption">
-                <FontAwesomeIcon icon={faInstagram} />
-                Instagram
-              </button>
-              <button className="shareOption">
-                <FontAwesomeIcon icon={faLinkedin} />
-                Linkedin
-              </button>
-              <button className="shareOption">
-                <FontAwesomeIcon icon={faWhatsapp} />
-                WhatsApp
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      
     </div>
+
+
+{showShareOptions && (
+  <div className="shareOptionsContainer">
+    <div className="shareOptionsModal">
+      <div className="shareOptionsHeader">
+        <p className="shareOptionsTitle">Choose where to share</p>
+        <button
+          className="closeShareOptionsBtn"
+          onClick={() => setShowShareOptions(false)}
+        >
+          <FontAwesomeIcon icon={faTimes} />
+        </button>
+      </div>
+      <div className="shareOptionsList">
+        <button className="shareOption">
+          <FontAwesomeIcon icon={faFacebook} />
+          Facebook
+        </button>
+        <button className="shareOption">
+          <FontAwesomeIcon icon={faInstagram} />
+          Instagram
+        </button>
+        <button className="shareOption">
+          <FontAwesomeIcon icon={faLinkedin} />
+          Linkedin
+        </button>
+        <button className="shareOption">
+          <FontAwesomeIcon icon={faWhatsapp} />
+          WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+   </>
   );
 };
 

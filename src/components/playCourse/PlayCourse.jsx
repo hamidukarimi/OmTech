@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faPlay } from "@fortawesome/free-solid-svg-icons";
-import Course from "../course/Course";
+import Course2 from "../course/Course2";
 import Footer from "../footer/Footer";
 import BackNav from "../backNav/BackNav";
 
@@ -275,30 +275,27 @@ const PlayCourse = () => {
 
         <div>
           <p className="text-2xl font-bold mb-7">Related Courses</p>
-          <Course
+          <Course2
             image={posters.graphicDesign}
-            type="DESIGNING"
-            price="$50"
-            title="Graphic Design"
-            lessons="20"
-            members="1740"
+            type="DESIGN"
+            price="$40"
+            title="UX/UI Design"
+            lessons="undefined"
+            description="undefined"
+            time_span="undefined"
+            lectures="undefined"
+            video_lessons="undefined"
+            members="undefined"
+            bg_image={posters.graphicDesign}
+            teacher_image="undefined"
+            teacher_name="undefined"
+            teacher_position="undefined"
+            about_course="undefined"
+            views="undefined"
+            duration="undefined"
+            rates="undefined"
           />
-          <Course
-            image={posters.fullStack}
-            type="DEVELOPMENT"
-            price="$50"
-            title="Full-Stack Web Development"
-            lessons="20"
-            members="1340"
-          />
-          <Course
-            image={posters.financialAccounting}
-            type="ACCOUNTING"
-            price="$30"
-            title="Financial Accounting"
-            lessons="20"
-            members="980"
-          />
+          
         </div>
       </div>
 

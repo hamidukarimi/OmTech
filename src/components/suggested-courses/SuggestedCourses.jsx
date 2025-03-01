@@ -1,10 +1,9 @@
 import BackNav from "../backNav/BackNav";
 import Course2 from "../course/Course2";
-
 import { posters, members, students } from "@/assets/images";
 import Footer from "../footer/Footer";
 
-const FreeCourses = () => {
+const SuggestedCourses = () => {
   const courses = [
     {
       id: 0,
@@ -168,10 +167,9 @@ const FreeCourses = () => {
       },
     },
   ];
-
   return (
     <>
-      <BackNav pageName="Free Courses" />
+      <BackNav pageName="Suggested Courses" />
       <div className="px-5 py-14">
         {courses.map((course) => (
           <Course2
@@ -223,4 +221,4 @@ const FreeCourses = () => {
   );
 };
 
-export default FreeCourses;
+export default SuggestedCourses;

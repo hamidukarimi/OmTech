@@ -90,7 +90,7 @@ let CourseDetails = () => {
           <div className="w-[88%] h-auto p-6 mt-5 text-center bg-bodyColor absolute left-1/2  transform -translate-x-1/2     border rounded-lg ">
             <div className="px-4">
               <p className="text-3xl font-bold  mb-3">Course description</p>
-              <p className="text-lg">{course_description}</p>
+              <p style={{textAlign: "justify"}} className="text-lg ">{course_description}</p>
             </div>
           </div>
         </div>
