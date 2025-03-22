@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -9,10 +10,7 @@ import BackNav from "../backNav/BackNav";
 
 import { posters } from "@/assets/images";
 
-
-
 const PlayCourse = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -31,6 +29,14 @@ const PlayCourse = () => {
       }
     }
   };
+
+  // about loading spinner starts
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const isLoading = !imageLoaded;
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+  // about loading spinner ends
 
   //------------  to get all data from where we navigate to this component
   const location = useLocation();
@@ -101,11 +107,9 @@ const PlayCourse = () => {
       views: nextV_views_4,
       duration: nextV_duration_4,
     },
-  
   ];
 
   const [activeMedia, setActiveMedia] = useState(mediaData[0]);
-
 
   // -------- this is the current played video component
   let CurrentPlay = () => {
@@ -113,28 +117,36 @@ const PlayCourse = () => {
       <>
         <div className="font-bold text-xl ">
           <div className="w-full h-[280px]  overflow-hidden relative">
-            
 
+          {!imageLoaded && (
+                  <div className="w-full h-full border-b bg-bodyColor   flex justify-center items-center">
+                    <div className="spinner "></div>
+                  </div>
+                )}
+                {/* Render the image but hide it until it's loaded */}
+               
             <video
+            onLoad={handleImageLoad}
+            style={{ display: imageLoaded ? "block" : "none" }}
               poster={activeMedia.image}
               className="w-full h-full  object-cover"
               ref={videoRef}
               src={activeMedia.video}
-              
               controls
             />
 
-            <div onClick={togglePlayPause} className={`bg-ourOrange px-5 py-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full  ${
+            <div
+              onClick={togglePlayPause}
+              className={`bg-ourOrange px-5 py-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full  ${
                 playVideo ? "opacity-100" : "opacity-0 w-full h-full"
               }`}
               aria-hidden="true"
-              >
-              
+            >
               <FontAwesomeIcon icon={faPlay} />
             </div>
           </div>
           <div className="bg-bodyColor pt-3 pb-4">
-          <p className="mb-1 ">{activeMedia.title}</p>
+            <p className="mb-1 ">{activeMedia.title}</p>
           </div>
           {/* <p>James Smith</p> */}
         </div>
@@ -166,7 +178,6 @@ const PlayCourse = () => {
   //   );
   // };
 
-
   // ---------- this codes are for arrow down and up button at the end of the "next videos" to show more or less videos
 
   const [sectionOpen, setSectionOpen] = useState(false);
@@ -184,17 +195,30 @@ const PlayCourse = () => {
       <BackNav pageName="Enroll to course" />
 
       <div className="p-5">
+        <div>
+          <div className="sticky top-16 z-10 ">
+            <CurrentPlay />
+          </div>
 
-      <div>
-       
-       <div className="sticky top-16">
-       <CurrentPlay />
-       </div>
-
-        {mediaData.map((media) => (
-            <div onClick={() => setActiveMedia(media)} key={media.id} className="w-full h-[118px] flex rounded-md overflow-hidden mb-4 border border-ourOrange ">
+          {mediaData.map((media) => (
+            <div
+              onClick={() => setActiveMedia(media)}
+              key={media.id}
+              className="w-full h-[118px] flex rounded-md overflow-hidden mb-4 border border-ourOrange "
+            >
               <div className="w-[50%] h-full bg-darkGray">
-                <img className="h-full w-full" src={media.image} />
+                {!imageLoaded && (
+                  <div className="w-full h-full flex justify-center items-center">
+                    <div className="spinner w-[30px] h-[30px] border-2"></div>
+                  </div>
+                )}
+                {/* Render the image but hide it until it's loaded */}
+                <img
+                  onLoad={handleImageLoad}
+                  style={{ display: imageLoaded ? "block" : "none" }}
+                  className="h-full w-full"
+                  src={media.image}
+                />
               </div>
               <div className="p-2 w-[50%] flex flex-col justify-between">
                 <p className="font-bold line-clamp-2">{media.title}</p>
@@ -205,7 +229,7 @@ const PlayCourse = () => {
               </div>
             </div>
           ))}
-          </div>
+        </div>
 
         <div className="  my-6">
           {/* <NextVideo
@@ -227,15 +251,11 @@ const PlayCourse = () => {
             set_nextV_duration={nextV_duration_3}
           /> */}
 
-          
-
           <div
             className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
               sectionOpen ? "max-h-[500px]" : "max-h-0"
             }`}
-          >
-            
-          </div>
+          ></div>
         </div>
 
         <FontAwesomeIcon
@@ -295,7 +315,6 @@ const PlayCourse = () => {
             duration="undefined"
             rates="undefined"
           />
-          
         </div>
       </div>
 

@@ -52,11 +52,12 @@ const Course = ({
 }) => {
   const navigate = useNavigate();
 
+    // State to handle the "Details" button spinner/transition
+    const [navigateAfterDelay, setNavigateAfterDelay] = useState(false);
+
   // State to check if the main course image has finished loading
   const [imageLoaded, setImageLoaded] = useState(false);
-  // State to handle the "Details" button spinner/transition
-  const [navigateAfterDelay, setNavigateAfterDelay] = useState(false);
-
+  
   // isLoading here is determined by whether the image has loaded
   const isLoading = !imageLoaded;
 
@@ -141,7 +142,8 @@ const Course = ({
         <Skeleton
           height={200}
           width="100%"
-          className="rounded-[12px_12px_0_0]"
+          baseColor="darkGray"
+          className="rounded-[12px_12px_0_0] "
         />
       )}
       {/* Render the image but hide it until it's loaded */}
@@ -157,7 +159,6 @@ const Course = ({
           // Skeleton for text and buttons while loading
           <>
             <Skeleton width={100} baseColor="darkGray" />
-            <Skeleton width={200} height={30} baseColor="darkGray" />
             <Skeleton count={3} baseColor="darkGray" />
             <div
               className="flex justify-center gap-5 px-6 mt-4"

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { icons, posters, students } from "@/assets/images";
 import Header from "../header/Header";
 import Course from "../course/Course";
 
@@ -13,6 +12,7 @@ const AllCourses = () => {
       image: "https://i.pinimg.com/236x/8b/33/79/8b337967a987f068e43f705aef7e7397.jpg",
       type: "DEVELOPMENT",
       price: "$50",
+      
       title: "Full-Stack Development",
       lessons: "28",
       description:
@@ -658,17 +658,15 @@ const AllCourses = () => {
           Find your dream course here
         </p>
 
-        <div className="relative my-10">
+        
           <input
-            className="w-full pl-5 pr-14 py-2 mt-5 rounded-[30px] text-white text-xl bg-bodyColor border border-ourOrange outline-none"
+            className="w-full p-5  my-10  py-2 mt-5 rounded-[30px] text-white text-xl bg-bodyColor border border-ourOrange outline-none"
             placeholder="Search..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <span className="absolute right-5 top-8">
-            <img className="w-[27px]" src={icons.search2} alt="Search Icon" />
-          </span>
-        </div>
+          
+       
 
         {searchQuery && filteredCourses.length === 0 && (
           <p className="text-center text-white text-xl">No courses found.</p>

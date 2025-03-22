@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Skeleton from "react-loading-skeleton";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import TestimonialCard from "../testimonials/TestimonialCard";
@@ -5,6 +7,17 @@ import TestimonialCard from "../testimonials/TestimonialCard";
 import { backgrounds } from "@/assets/images";
 
 let About = () => {
+  // State to check if the main course image has finished loading
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // isLoading here is determined by whether the image has loaded
+  const isLoading = !imageLoaded;
+
+  // When the image loads, update the state
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   const ourTeam = [
     {
       id: 0,
@@ -81,9 +94,21 @@ let About = () => {
             {ourTeam.map((card) => (
               <div className="my-14 w-full h-[360px] rounded-3xl  relative">
                 <div className="w-full h-[360px] rounded-[18px] overflow-hidden">
+                  {!imageLoaded && (
+                    <Skeleton
+                      height={200}
+                      width="100%"
+                      baseColor="darkGray"
+                      className=" "
+                    />
+                  )}
+                  {/* Render the image but hide it until it's loaded */}
+
                   <img
+                    onLoad={handleImageLoad}
                     className="w-full h-full object-cover"
                     src={card.image}
+                    style={{ display: imageLoaded ? "block" : "none" }}
                   />
                 </div>
                 <div className="overlay w-full h-[155px] rounded-[0_0_18px_18px] absolute bottom-0"></div>

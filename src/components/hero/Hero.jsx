@@ -17,7 +17,7 @@ let Hero = () => {
           </p>
           <div className="relative">
             <input
-              className="  w-full pl-5 pr-14 py-4 mt-12 rounded-xl text-white text-2xl bg-black border border-ourOrange outline-none"
+              className="  w-full pl-5 pr-14 py-4 mt-12 rounded-xl text-white text-2xl bg-bodyColor border border-ourOrange outline-none"
               placeholder="What Is On Your Mind?"
             />
             <span className="absolute right-5 top-16 ">
