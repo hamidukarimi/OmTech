@@ -136,7 +136,7 @@ const Sidebar = ({ sidebarShow, closeSidebar }) => {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <span className="absolute top-[33px] right-4">
-            <img src={icons.search2} alt="Search" />
+            {/* <img src={icons.search2} alt="Search" /> */}
           </span>
         </div>
 

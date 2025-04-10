@@ -2,6 +2,8 @@ import React from "react";
 // import "./App.css";
 
 import { backgrounds, icons } from "@/assets/images";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 
 let Hero = () => {
@@ -21,7 +23,8 @@ let Hero = () => {
               placeholder="What Is On Your Mind?"
             />
             <span className="absolute right-5 top-16 ">
-              <img className="w-[35px] " src={icons.search2} />
+              {/* <img className="w-[35px] " src={icons.search2} /> */}
+              <FontAwesomeIcon className="text-3xl font-normal" icon={faSearch}/>
             </span>
           </div>
         </div>
