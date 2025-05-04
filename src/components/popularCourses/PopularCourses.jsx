@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import Course from "../course/Course";
 import { posters, students, members } from "@/assets/images";
+import Course2 from "../course/Course2";
 
 let PopularCourses = () => {
   const [courses, setCourses] = useState([
    
     {
       id: 0,
+      rates: "4.36",
       image: "https://i.pinimg.com/236x/8b/33/79/8b337967a987f068e43f705aef7e7397.jpg",
       type: "DEVELOPMENT",
       price: "$50",
@@ -55,6 +57,7 @@ let PopularCourses = () => {
     },
     {
       id: 1,
+      rates: "5.24",
       image: "https://i.pinimg.com/236x/5f/3e/4b/5f3e4b25629a1241119592e1e1377974.jpg",
       type: "DATA SCIENCE",
       price: "$70",
@@ -102,6 +105,7 @@ let PopularCourses = () => {
     },
     {
       id: 2,
+      rates: "5.43",
       image: "https://i.pinimg.com/236x/2d/98/12/2d9812b228eaf0802b5d5b890cce63eb.jpg",
       type: "DESIGN",
       price: "$60",
@@ -149,6 +153,7 @@ let PopularCourses = () => {
     },
     {
       id: 3,
+      rates: "4.17",
       image: "https://i.pinimg.com/236x/6d/fa/2e/6dfa2e7fbd65c6fe08c1cf4306c1288b.jpg",
       type: "DEVELOPMENT",
       price: "$80",
@@ -196,6 +201,7 @@ let PopularCourses = () => {
     },
     {
       id: 4,
+      rates: "4.36",
       image: "https://i.pinimg.com/474x/c6/e0/c6/c6e0c62998bf53d547fb099f6bc831e2.jpg",
       type: "MARKETING",
       price: "$55",
@@ -243,6 +249,7 @@ let PopularCourses = () => {
     },
     {
       id: 5,
+      rates: "4.36",
       image: "https://i.pinimg.com/474x/ab/a9/41/aba94111afe833e42a9dd5905dbeb565.jpg",
       type: "AI & ML",
       price: "$90",
@@ -290,6 +297,7 @@ let PopularCourses = () => {
     },
     {
       id: 6,
+      rates: "4.36",
       image: "https://i.pinimg.com/474x/4d/a4/44/4da4441108a5238b1d18206cac2ebbe8.jpg",
       type: "SECURITY",
       price: "$65",
@@ -337,6 +345,7 @@ let PopularCourses = () => {
     },
     {
       id: 7,
+      rates: "4.36",
       image: "https://i.pinimg.com/236x/66/d1/68/66d168f451f1576955219acfc2a890d6.jpg",
       type: "CLOUD",
       price: "$75",
@@ -384,6 +393,7 @@ let PopularCourses = () => {
     },
     {
       id: 8,
+      rates: "4.36",
       image: "https://i.pinimg.com/236x/b7/c1/2d/b7c12df79530834f6704c4d750a14eb2.jpg",
       type: "GAME DEVELOPMENT",
       price: "$85",
@@ -431,6 +441,7 @@ let PopularCourses = () => {
     },
     {
       id: 9,
+      rates: "4.36",
       image: "https://i.pinimg.com/236x/b6/e5/18/b6e5187153e58267d57789dd6c097d0f.jpg",
       type: "BLOCKCHAIN",
       price: "$95",
@@ -478,6 +489,7 @@ let PopularCourses = () => {
     },
     {
       id: 10,
+      rates: "4.36",
       image: "https://i.pinimg.com/236x/d3/d5/a3/d3d5a3e259ee8ca212d85f07e92c16cd.jpg",
       type: "DESIGN",
       price: "$50",
@@ -525,6 +537,7 @@ let PopularCourses = () => {
     },
     {
       id: 11,
+      rates: "4.36",
       image: "https://i.pinimg.com/236x/90/40/cb/9040cb3f92de015456cf13caddc33a0b.jpg",
       type: "MANAGEMENT",
       price: "$65",
@@ -570,53 +583,54 @@ let PopularCourses = () => {
         nextV_duration_4: "21:00"
       }
     },
-    {
-      id: 12,
-      image: "https://i.pinimg.com/236x/c9/c1/d3/c9c1d3545dfdffe9ae2589805acb0021.jpg",
-      type: "TESTING",
-      price: "$55",
-      title: "Software Testing and QA",
-      lessons: "21",
-      description:
-        "Learn the principles of software testing, quality assurance methodologies, and automation testing tools.",
-      time_span: "4 weeks",
-      lectures: "6 Lessons",
-      video_lessons: "10 hours",
-      members: "690",
-      bg_image: "https://i.pinimg.com/236x/91/6b/a0/916ba07a93514ddc527a344522ce2119.jpg",
-      teacher_image: "https://i.pinimg.com/236x/9f/7c/2b/9f7c2b12e2fb7559228590ad5a22deac.jpg",
-      teacher_name: "Lisa Nguyen",
-      teacher_position: "QA Engineer",
-      about_course:
-        "This course covers manual and automated testing techniques to ensure high-quality software delivery.",
-      views: 3700,
-      duration: "39:00",
-      playVideos: {
-        nextV_image_1: "https://i.pinimg.com/736x/d7/fc/ca/d7fcca8d0be31a34aca70dfe5df696b3.jpg",
-        nextV_video_1: "./testing1.mp4",
-        nextV_title_1: "Introduction to Software Testing",
-        nextV_views_1: 420,
-        nextV_duration_1: "16:30",
+    // {
+    //   id: 12,
+    //   rates: "4.36",
+    //   image: "https://i.pinimg.com/236x/c9/c1/d3/c9c1d3545dfdffe9ae2589805acb0021.jpg",
+    //   type: "TESTING",
+    //   price: "$55",
+    //   title: "Software Testing and QA",
+    //   lessons: "21",
+    //   description:
+    //     "Learn the principles of software testing, quality assurance methodologies, and automation testing tools.",
+    //   time_span: "4 weeks",
+    //   lectures: "6 Lessons",
+    //   video_lessons: "10 hours",
+    //   members: "690",
+    //   bg_image: "https://i.pinimg.com/236x/91/6b/a0/916ba07a93514ddc527a344522ce2119.jpg",
+    //   teacher_image: "https://i.pinimg.com/236x/9f/7c/2b/9f7c2b12e2fb7559228590ad5a22deac.jpg",
+    //   teacher_name: "Lisa Nguyen",
+    //   teacher_position: "QA Engineer",
+    //   about_course:
+    //     "This course covers manual and automated testing techniques to ensure high-quality software delivery.",
+    //   views: 3700,
+    //   duration: "39:00",
+    //   playVideos: {
+    //     nextV_image_1: "https://i.pinimg.com/736x/d7/fc/ca/d7fcca8d0be31a34aca70dfe5df696b3.jpg",
+    //     nextV_video_1: "./testing1.mp4",
+    //     nextV_title_1: "Introduction to Software Testing",
+    //     nextV_views_1: 420,
+    //     nextV_duration_1: "16:30",
   
-        nextV_image_2: "https://i.pinimg.com/236x/29/c6/ad/29c6ad700ffa6c4cb1ca93f0ddecc5af.jpg",
-        nextV_video_2: "./testing2.mp4",
-        nextV_title_2: "Manual Testing Techniques",
-        nextV_views_2: 400,
-        nextV_duration_2: "17:00",
+    //     nextV_image_2: "https://i.pinimg.com/236x/29/c6/ad/29c6ad700ffa6c4cb1ca93f0ddecc5af.jpg",
+    //     nextV_video_2: "./testing2.mp4",
+    //     nextV_title_2: "Manual Testing Techniques",
+    //     nextV_views_2: 400,
+    //     nextV_duration_2: "17:00",
   
-        nextV_image_3: "https://i.pinimg.com/236x/3e/08/47/3e084784c138383bd45d3ce761b7a92e.jpg",
-        nextV_video_3: "./testing3.mp4",
-        nextV_title_3: "Automation Testing Tools",
-        nextV_views_3: 390,
-        nextV_duration_3: "16:00",
+    //     nextV_image_3: "https://i.pinimg.com/236x/3e/08/47/3e084784c138383bd45d3ce761b7a92e.jpg",
+    //     nextV_video_3: "./testing3.mp4",
+    //     nextV_title_3: "Automation Testing Tools",
+    //     nextV_views_3: 390,
+    //     nextV_duration_3: "16:00",
   
-        nextV_image_4: "https://i.pinimg.com/736x/11/23/3e/11233e5927e348180968310ea5a18df6.jpg",
-        nextV_video_4: "./testing4.mp4",
-        nextV_title_4: "QA Best Practices",
-        nextV_views_4: 410,
-        nextV_duration_4: "18:00"
-      }
-    }
+    //     nextV_image_4: "https://i.pinimg.com/736x/11/23/3e/11233e5927e348180968310ea5a18df6.jpg",
+    //     nextV_video_4: "./testing4.mp4",
+    //     nextV_title_4: "QA Best Practices",
+    //     nextV_views_4: 410,
+    //     nextV_duration_4: "18:00"
+    //   }
+    // }
   ]);
 
   //for toggle add and remove from bookmarks page
@@ -649,14 +663,16 @@ let PopularCourses = () => {
 
   return (
     <>
-      <div className=" -mt-3  px-5 font-bold">
-        <p className="text-2xl text-center">Our most popular courses</p>
+      <div className=" -mt-3  px-5 md:px-10 xl:px-40  font-bold">
+        <p className="text-2xl md:text-3xl xl:text-4xl text-center">Our most popular courses</p>
         <br />
         <br />
         <br />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
         {courses.map((course) => (
-          <Course
+          <Course2
             key={course.id}
+            rates={course.rates}
             image={course.image}
             type={course.type}
             price={course.price}
@@ -697,6 +713,7 @@ let PopularCourses = () => {
             nextV_duration_4={course?.playVideos?.nextV_duration_4}
           />
         ))}
+        </div>
       </div>
     </>
   );

@@ -100,7 +100,7 @@ const Dashboard = () => {
           <section>
             <div className="grid grid-cols-2 gap-4">
               {cards.map((card) => (
-                <div className="relative hover:shadow-[0px_0px_20px_1px_#ffbb763f] border border-transparent transition-all duration-300 ease-in-out hover:border-white/45 w-full h-[145px] bg-[#222222] rounded-lg p-3 text-center pt-8 shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
+                <div className="relative hover:shadow-[0px_0px_20px_1px_#ffbb763f] border border-transparent transition-all duration-300 ease-in-out hover:border-white/45   w-full h-[145px] bg-[#222222] rounded-lg p-3 text-center pt-8 shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
                   <FontAwesomeIcon
                     className={`absolute right-4 top-4 text-xs  ${card.state}`}
                     icon={faCircle}

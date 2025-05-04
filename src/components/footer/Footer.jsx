@@ -22,7 +22,7 @@ let Footer = () => {
           <FontAwesomeIcon icon={faYoutube} />
         </div>
 
-        <div className="grid grid-cols-2 gap-y-10 mb-9">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 mb-9">
           <div>
             <p className="text-2xl font-bold mb-4 ">About</p>
             <div className="text-lg leading-8">

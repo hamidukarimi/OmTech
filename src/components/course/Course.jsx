@@ -130,10 +130,10 @@ const Course = ({
   };
 
   return (
-    <div className="mb-14 relative border border-ourOrange overflow-hidden bg-courseBGcolor rounded-[12px]">
+    <div className="group mb-14 relative border border-ourOrange overflow-hidden bg-courseBGcolor hover:bg-[#1d1d1d] transition rounded-[12px]">
       <span
         onClick={handleBookmark}
-        className="absolute top-3 right-3 cursor-pointer text-3xl active:text-ourOrange"
+        className="absolute top-3 right-3 z-10 cursor-pointer text-3xl active:text-ourOrange"
       >
         <FontAwesomeIcon icon={faBookmark} />
       </span>
@@ -147,13 +147,15 @@ const Course = ({
         />
       )}
       {/* Render the image but hide it until it's loaded */}
+      <div className="w-full h-[290px]  overflow-hidden  rounded-[12px_12px_0_0]">
       <img
         onLoad={handleImageLoad}
         src={image}
         alt="Course"
-        className="w-full h-[290px] object-cover  rounded-[12px_12px_0_0]"
+        className="w-full h-full object-cover group-hover:scale-110 duration-700  "
         style={{ display: imageLoaded ? "block" : "none" }}
       />
+      </div>
       <div className="px-3 py-7">
         {isLoading ? (
           // Skeleton for text and buttons while loading

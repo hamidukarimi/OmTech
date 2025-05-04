@@ -24,8 +24,7 @@ export default {
       },
       colors: {
         darkGray: "#343434",
-        // ourOrange: "#ffbb38",
-        ourOrange: "#1fb7f6",
+        ourOrange: "#ffbb38",
         bodyColor: "#181818",
         courseBGcolor: "#242424",
       },

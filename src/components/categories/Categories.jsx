@@ -1,3 +1,4 @@
+import Marquee from 'react-fast-marquee';
 import { icons } from "@/assets/images";
 
 
@@ -37,11 +38,12 @@ let Categories = () => {
 
   return (
     <>
-      <div className="pb-14 pt-10 px-5  text-center">
-        <p className="text-2xl mb-14">
-          Discover Leading Categories to alevate your journey
+      <div className="pb-14 pt-10 lg:pt-16    px-7 md:px-14 xl:px-52  text-center">
+        <p className="text-2xl md:text-3xl xl:text-4xl mb-14 md:mb-20 lg:mb-24 md:px-20 lg:px-56   ">
+          Discover Leading Categories to alevate <br className="hidden xl:block"/> your journey
         </p>
-
+        
+      <div className="block md:hidden   md:px-14">
         {categoriesCards.map((card) => (
           <div
             key={card.id}
@@ -52,6 +54,27 @@ let Categories = () => {
             <p>{card.subTitle}</p>
           </div>
         ))}
+        </div>
+
+        <div className='hidden md:block'>
+        <Marquee speed={50} gradient={false}   loop={0} pauseOnHover={true} play={true} className="w-full" autoFill={true}>
+        <div className="flex  gap-14 ml-14">
+        {categoriesCards.map((card) => (
+          <div
+            key={card.id}
+            className=" font-bold  mb-20  flex flex-col justify-center items-center"
+          >
+            <img className="mb-4 lg:mb-5 w-[50px]" src={card.icon} />
+            <p className="text-xl my-2 lg:my-3">{card.title}</p>
+            <p>{card.subTitle}</p>
+          </div>
+        ))}
+        </div>
+        </Marquee>
+        </div>
+
+
+
       </div>
     </>
   );

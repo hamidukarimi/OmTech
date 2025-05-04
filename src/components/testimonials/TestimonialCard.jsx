@@ -17,7 +17,7 @@ let TestimonialCard = ({ message, image, name, position }) => {
   };
 
   return (
-    <div className="bg-[#373737] py-9 px-7 mt-16  rounded-md ">
+    <div className=" bg-[#373737] py-9 px-7 mt-16  rounded-md ">
       <span className="text-amber-500 flex gap-1.5 mb-5 text-lg">
         <FontAwesomeIcon icon={faStar} />
         <FontAwesomeIcon icon={faStar} />

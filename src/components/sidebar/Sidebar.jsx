@@ -117,7 +117,7 @@ const Sidebar = ({ sidebarShow, closeSidebar }) => {
     <>
       <div
         className={`
-          fixed top-0 left-0 w-[80%] h-full overflow-y-scroll scrollbar-none z-40 bg-[#262626] pb-5 px-6
+          fixed top-0 left-0 w-[80%] md:w-[300px] h-full overflow-y-scroll scrollbar-none z-40 bg-[#262626] pb-5 px-6
           transform transition-transform duration-300
           ${sidebarShow ? "translate-x-0" : "-translate-x-full"}
         `}
@@ -136,8 +136,9 @@ const Sidebar = ({ sidebarShow, closeSidebar }) => {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <span className="absolute top-[33px] right-4">
-            {/* <img src={icons.search2} alt="Search" /> */}
+            <img src={icons.search2} alt="Search" />
           </span>
+          
         </div>
 
         {/* If there's a search query, render only the filtered items */}

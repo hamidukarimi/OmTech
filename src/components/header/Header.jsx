@@ -16,11 +16,24 @@ let Header = () => {
 
   return (
     <>
-      <nav className="sticky -top-1 z-40 w-full bg-darkGray flex justify-between text-2xl text-white py-4 px-5">
+      <nav className="lg:z-50 sticky -top-1 z-40 w-full bg-darkGray flex justify-between text-2xl text-white py-4 xl:py-3 px-5">
         <span onClick={handleSidebar} className="flex justify-center items-center cursor-pointer">
           <img src={icons.bars} alt="Menu" />
+          <p className="hidden lg:block  text-ourOrange text-3xl font-bold ml-6">OmTech</p>
+
         </span>
+
+        
+
+   
+
         <div className="flex gap-3 items-center relative">
+        
+            <input
+              className="hidden lg:block  w-2/4 pl-5 pr-14 py-1  rounded-sm text-white text-2xl bg-transparent border border-ourOrange outline-none"
+              placeholder="What Is On Your Mind?"
+            />
+
           <span className="text-xl text-green-500 relative inline-block">
             <FontAwesomeIcon icon={faCircle} className="animate-pulse" />
           </span>

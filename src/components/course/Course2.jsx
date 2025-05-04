@@ -119,18 +119,19 @@ const Course2 = ({
 
   return (
     <div
-      className={` relative w-full h-[490px] rounded-md bg-darkGray px-4 bg-no-repeat bg-cover mb-12`}
+    onClick={goToCourseDetails}
+      className={` relative  w-full h-[470px] lg:h-[380px] xl:h-[470px] cursor-pointer rounded-md bg-darkGray shadow-xl shadow-transparent hover:shadow-[#00000040] transition px-4 lg:px-2 xl:px-4 bg-no-repeat bg-cover mb-12`}
       style={{ backgroundImage: `url(${bg_image})` }}
     >
-      <span className="absolute top-5 right-5 z-20 w-14 h-14 bg-blue-600 rounded-full flex justify-center items-center font-bold">
+      <span className="absolute top-5 right-5 lg:top-3 lg:right-3 xl:top-5 xl:right-5 z-20 w-14 h-14 lg:w-12 lg:h-12 xl:w-14 xl:h-14  bg-blue-600 rounded-full flex justify-center items-center font-bold">
         {price}
       </span>
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
       {/* content */}
-      <div className="relative z-20 top-44">
-        <p>{type}</p>
-        <p className="text-2xl font-bold my-5 ">{title}</p>
-        <div className="text-ourOrange mb-6">
+      <div className="relative z-20 top-44 lg:top-36 xl:top-48">
+        <p className="lg:text-xs xl:text-[16px]">{type}</p>
+        <p className="text-2xl lg:text-xl xl:text-2xl font-bold my-5 truncate">{title}</p>
+        <div className="text-ourOrange mb-6 lg:text-sm xl:text-[16px]">
           <FontAwesomeIcon icon={faStar} />
           <FontAwesomeIcon icon={faStar} />
           <FontAwesomeIcon icon={faStar} />
@@ -141,7 +142,7 @@ const Course2 = ({
 
         <button
           onClick={goToCourseDetails}
-          className="w-full h-[50px] bg-darkGray hover:bg-[#292929]  transition rounded-sm mb-3"
+          className="w-full py-3.5 lg:py-2 xl:py-3.5 bg-darkGray hover:bg-[#292929]  transition rounded-sm mb-3 lg:mb-2 xl:mb-3"
         >
           {navigateAfterDelay ? (
             <FontAwesomeIcon
@@ -152,7 +153,7 @@ const Course2 = ({
             "Course Details"
           )}
         </button>
-        <button onClick={goToPlayCourse} className="w-full h-[50px] bg-ourOrange hover:bg-[#efaf3a] transition  rounded-sm">
+        <button onClick={goToPlayCourse} className="w-full py-3.5 lg:py-2 xl:py-3.5 bg-ourOrange hover:bg-[#efaf3a] transition  rounded-sm">
           Enroll Now
         </button>
       </div>
