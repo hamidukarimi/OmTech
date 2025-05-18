@@ -23,8 +23,8 @@ const FAQ = () => {
       <div className="hero-overlay w-full h-full  absolute top-0 z-10"></div>
 
 
-      <div className="hero-content px-4 relative pt-24 bottom-5   text-white z-30 ">
-        <p className="text-[43px]  font-bold leading-tight">
+      <div className="hero-content px-4 md:px-14 lg:px-52 2xl:px-96 relative pt-24 bottom-5 md:pt-32 lg:pt-48   text-white z-30 ">
+        <p className="text-[43px]  font-bold leading-tight  lg:text-center ">
           We'r here to help you with anything and anytime on this page
         </p>
       </div>
@@ -32,17 +32,16 @@ const FAQ = () => {
 
       
 
-      <div className="relative px-5">
+      <div className=" px-5 md:px-14 lg:px-52">
+      
         <input
-          className="w-full pl-5 pr-14 py-4 mt-5 rounded-[30px] text-white text-xl bg-black border border-ourOrange outline-none"
+          className="w-full pl-5 pr-14 py-4 mt-5 rounded-[30px] text-white text-xl bg-bodyColor border border-ourOrange outline-none"
           placeholder="What Is On Your Mind?"
         />
-        <span className="absolute right-10 top-9 ">
-          <img className="w-[32px] " src={icons.search2} />
-        </span>
+
       </div>
 
-      <div className="px-5 py-10">
+      <div className="px-5 md:px-14 lg:px-52 py-10">
         <p className="text-[26px] font-bold mb-5">FAQ</p>
 
         <div>
@@ -212,7 +211,7 @@ const FAQ = () => {
             <div className="text-center pt-8 pb-20">
             <p className="text-2xl font-bold mb-4">Still stuck? Help us a mail away</p>
             <Link to="/contact-page">
-            <button className="w-full bg-ourOrange p-3 rounded-md">Send a message</button>
+            <button className="w-full lg:w-36 xl:w-40 bg-ourOrange p-3 rounded-md">Send a message</button>
             </Link>
 
             </div>

@@ -1,76 +1,81 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
+  faFacebookF,
   faInstagram,
-  faXTwitter,
+  faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import React from "react";
 
-let Footer = () => {
-  return (
-    <>
-      <div className="w-full   bg-darkGray px-5 pt-14">
-        <p className="font-bold text-[27px] text-ourOrange">OmTech</p>
-        <p className="mt-5 text-gray-200">
-          Lorem ispum doler sit amet kia retimi something Lorem ispum doler sit{" "}
-        </p>
+const sections = [
+  {
+    title: 'About',
+    links: ['About Us', 'Our Mission', 'Team Members', 'Careers'],
+  },
+  {
+    title: 'Courses',
+    links: ['Web Development', 'UI/UX Design', 'Data Science', 'Mobile Apps'],
+  },
+  {
+    title: 'Resources',
+    links: ['Blog', 'Help Center', 'Community', 'Privacy Policy'],
+  },
+  {
+    title: 'Contact',
+    links: ['Support', 'Email Us', 'Locations', 'FAQs'],
+  },
+];
 
-        <div className="flex justify-between w-36 text-xl   mt-9 mb-12">
-          <FontAwesomeIcon icon={faFacebook} />
-          <FontAwesomeIcon icon={faInstagram} />
-          <FontAwesomeIcon icon={faXTwitter} />
-          <FontAwesomeIcon icon={faYoutube} />
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 mb-9">
-          <div>
-            <p className="text-2xl font-bold mb-4 ">About</p>
-            <div className="text-lg leading-8">
-              <p>About us</p>
-              <p>Our Mission</p>
-              <p>Team Members</p>
-              <p>Careers</p>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-2xl font-bold mb-4 ">Courses</p>
-            <div className="text-lg leading-8">
-              <p>About us</p>
-              <p>Our Mission</p>
-              <p>Team Members</p>
-              <p>Careers</p>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-2xl font-bold mb-4 ">About</p>
-            <div className="text-lg leading-8">
-              <p>About us</p>
-              <p>Our Mission</p>
-              <p>Team Members</p>
-              <p>Careers</p>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-2xl font-bold mb-4 ">Courses</p>
-            <div className="text-lg leading-8">
-              <p>About us</p>
-              <p>Our Mission</p>
-              <p>Team Members</p>
-              <p>Careers</p>
-            </div>
+const Footer = () => (
+  <footer className="bg-darkGray text-gray-200 px-6 py-12">
+    <div className="max-w-screen-xl mx-auto">
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-10">
+        {/* Brand and Social Section */}
+        <div className="flex-1">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ourOrange">OmTech</h2>
+          <p className="mt-4 text-sm sm:text-base lg:text-lg max-w-md">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div className="flex gap-4 mt-6 text-xl">
+            <a href="#" aria-label="Facebook" className="hover:text-white transition">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a href="#" aria-label="Instagram" className="hover:text-white transition">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="#" aria-label="Twitter" className="hover:text-white transition">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a href="#" aria-label="YouTube" className="hover:text-white transition">
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
           </div>
         </div>
 
-        <hr />
-        <br />
-        <p className="text-center font-bold  ">copyright 2025 OmTech</p>
-        <br />
+        {/* Sections Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-10 ">
+          {sections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-3">{section.title}</h3>
+              <ul className="space-y-2 text-sm sm:text-base lg:text-[16px]">
+                {section.links.map((link) => (
+                  <li key={link}>
+                    <a href="#" className="hover:text-white transition">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
-    </>
-  );
-};
+
+      <div className="border-t border-gray-700 mt-10 pt-6">
+        <p className="text-center text-xs sm:text-sm lg:text-base">&copy; {new Date().getFullYear()} OmTech. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;

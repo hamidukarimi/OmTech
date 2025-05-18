@@ -1,5 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../App.css";
 import { icons } from "@/assets/images";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 let Services = () => {
   const services = [
@@ -29,12 +32,17 @@ let Services = () => {
   return (
     <>
       <div className="  py-14 lg:py-20 lg:mt-20 xl:mt-0 xl:py-40 px-7 md:px-14 xl:px-52 text-center ">
-        <p className=" font-bold text-2xl md:text-3xl xl:text-4xl ">Our Services</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 xl:gap-x-12 ">
+        <p className=" font-bold text-2xl md:text-3xl xl:text-4xl mb-14">
+          Our Services
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 xl:gap-x-12 gap-y-14">
           {services.map((card) => (
-            <div className="h-[320px] md:h-[260px] lg:h-[240px] 2xl:h-[260px]  justForShadow  relative    px-10 bg-bodyColor mt-14  lg:mt-12  flex flex-col justify-center items-center gap-4 md:gap-3 lg:gap-2 ">
+            <div className="h-[320px] md:h-[260px] lg:h-[240px] 2xl:h-[260px]  justForShadow  relative    px-10 bg-bodyColor   lg:mt-12  flex flex-col justify-center items-center gap-4 md:gap-3 lg:gap-2 ">
               <div className="w-[110px] h-[5px] bg-ourOrange absolute top-0"></div>
-              <img className="w-[90px] md:w-[69px] lg:w-[58px] 2xl:w-[60px]" src={card.icon} />
+              <img
+                className="w-[90px] md:w-[69px] lg:w-[58px] 2xl:w-[60px]"
+                src={card.icon}
+              />
               <p className="text-3xl md:text-2xl lg:text-[21px] 2xl:text-3xl font-bold   shine-animate">
                 {card.title}
               </p>
@@ -43,6 +51,17 @@ let Services = () => {
               </p>
             </div>
           ))}
+
+
+          <Link className="hidden md:flex lg:hidden" to="/About">
+          <div className="w-full h-full justForShadow flex justify-center items-center">
+            <div className="p-4 px-6 border rounded-full text-xl">
+              <FontAwesomeIcon icon={faAngleRight} />
+            </div>
+          </div>
+          </Link>
+
+        
         </div>
       </div>
     </>

@@ -119,8 +119,8 @@ const Course2 = ({
 
   return (
     <div
-    onClick={goToCourseDetails}
-      className={` relative  w-full h-[470px] lg:h-[380px] xl:h-[470px] cursor-pointer rounded-md bg-darkGray shadow-xl shadow-transparent hover:shadow-[#00000040] transition px-4 lg:px-2 xl:px-4 bg-no-repeat bg-cover mb-12`}
+    
+      className={` relative  w-full h-[470px] lg:h-[380px] xl:h-[470px] rounded-md bg-darkGray shadow-xl shadow-transparent hover:shadow-[#00000040] transition px-4 lg:px-2 xl:px-4 bg-no-repeat bg-cover mb-12`}
       style={{ backgroundImage: `url(${bg_image})` }}
     >
       <span className="absolute top-5 right-5 lg:top-3 lg:right-3 xl:top-5 xl:right-5 z-20 w-14 h-14 lg:w-12 lg:h-12 xl:w-14 xl:h-14  bg-blue-600 rounded-full flex justify-center items-center font-bold">

@@ -26,19 +26,34 @@ let Standout = () => {
       title: "Proven Results Instructors",
       description: "Lorem ispum doler aset met kia meritonhe meri",
     },
+
+
+   
+
+    {
+      id: 0,
+      icon: icons.instructor,
+      title: "Expert Instructor",
+      description: "Lorem ispum doler aset met kia meritonhe meri",
+    }, {
+      id: 0,
+      icon: icons.instructor,
+      title: "Expert Instructor",
+      description: "Lorem ispum doler aset met kia meritonhe meri",
+    },
   ];
 
   return (
-    <div className="my-28 xl:my-32 text-center px-5">
+    <div className="my-28 xl:my-32 text-center px-7 md:px-14 xl:px-52">
       <p className="text-lg md:text-xl lg:text-2xl mb-7">What Makes Us Stand Out?</p>
-      <p className="text-2xl md:text-3xl xl:text-4xl">Transform Your Learning Experiences</p>
+      <p className="text-2xl md:text-3xl xl:text-4xl mb-20">Transform Your Learning Experiences</p>
 
-    <div className="block md:flex flex-wrap justify-center ">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-16">
       {StandOuts.map((card) => (
-        <div className=" font-bold  my-20 px-20 flex flex-col justify-center items-center">
-          <img className="mb-5" src={card.icon} />
-          <p className="text-xl my-3 ">{card.title}</p>
-          <p className="font-normal">{card.description}</p>
+        <div className=" font-bold   px-20 md:px-0 flex flex-col justify-center items-center   ">
+          <img className="mb-4" src={card.icon} />
+          <p className="text-xl">{card.title}</p>
+          {/* <p className="font-normal text-sm md:text-">{card.description}</p> */}
         </div>
       ))}
       </div>
